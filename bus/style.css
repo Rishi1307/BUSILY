@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+*{
+    padding: 0;
+    margin-top: 0;
+    margin-left: -.5px ;
+}
+
+body{
+    font-family: 'poppins', sans-serif;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    box-shadow: #5c5c5c;
+}
+
+nav{
+    width: 100%;
+    height: 10%;
+    text-decoration: none;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #000000;
+
+}
+
+nav ul {
+    display: flex;
+    padding: 15px;
+    padding-top: 10px;
+}
+
+nav ul li{
+    display: flex;
+    position: relative;
+    list-style-type: none;
+    color: #5c5c5c;
+    margin-right: 25px;
+    cursor: pointer;
+    transition: .3s linear;
+    font-size: 18px;
+    padding-top: 10px;
+}
+
+nav ul li:hover{
+    color: #ffffff;
+}
+
+nav ul li:nth-child(1){
+    color: #ffffff;
+}
+
+nav .search{
+    position: relative;
+    width:30%;
+    margin-left: 5%;
+    padding: 5px 5px;
+    border-radius: 20px;
+    color: rgb(255, 255, 255);
+    border-color: #9a0e0e;
+    background-color: #4a4a4ac0;
+}
+
+nav .search::before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background: rgb(255, 255, 255);
+    backdrop-filter: blur(5px);
+    z-index: -1;
+}
+nav .search .bi{
+    font-size: 15px;
+    padding: 3px 0px 0px 10px;
+}
+
+nav .search input{
+    background: none;
+    outline:none;
+    border:none;
+    padding: 0px 10px;
+    color: #ffffff;
+    font-size: 13px;
+}
+
+nav .logo img{
+    width: 120px;
+    height: 90px;
+    margin-left: 50px;
+    margin-bottom: 10px;
+    
+}
+
+.content {
+    background-color: #101010;
+    padding-bottom: 100px;
+    background-image: url(img/Untitled\ \(1\)\ \(2\).jpg);
+    height: 570px;
+
+    
+}
+
+.content h1{
+    font-size: 50px;
+    font-weight: 900;
+    color: #ffffff;
+    padding-top: 300px;
+    padding-left: 120px;
+}
+
+.content p{
+    font-size: 30px;
+    font-weight: 900;
+    color: #ffffff;
+    padding-left: 120px;
+    margin-top: -40px;
+}
+
+
+
+.buttons{
+    margin-top: 10px;
+    margin-left: 120px;
+}
+
+/* CSS */
+.button1 {
+    align-self: center;
+    background-color: #fff;
+    background-image: none;
+    background-position: 0 80%;
+    background-repeat: repeat no-repeat;
+    background-size: 4px 3px;
+    border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+    border-style: solid;
+    border-width: 2px;
+    box-shadow: rgba(160, 155, 155, 0.578) 15px 28px 25px -18px;
+    box-sizing: border-box;
+    color: #41403e;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Neucha, sans-serif;
+    font-size: 1rem;
+    line-height: 23px;
+    outline: none;
+    padding: .75rem;
+    text-decoration: none;
+    transition: all 235ms ease-in-out;
+    border-bottom-left-radius: 15px 255px;
+    border-bottom-right-radius: 225px 15px;
+    border-top-left-radius: 255px 15px;
+    border-top-right-radius: 15px 225px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .button1:hover {
+    box-shadow: rgba(177, 177, 177, 0.3) 2px 8px 8px -5px;
+    transform: translate3d(0, 4px, 0);
+  }
+  
+  .button1:focus {
+    box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+  }
+
+  .content2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .content2 video{
+    width: 500px;
+    height: 800px;
+    margin-right: 100px;
+  }
+
+  .content2 h1{
+    font-size: 50px;
+    font-weight: 900;
+  }
+
+  
+  .content2 input{
+    width: 300px;
+    height: 50px;
+    background-color: #dedede;
+    color: black;
+    outline: none;      
+    border: none;
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 20px;
+  }
+
+.button2 {
+    appearance: none;
+    background-color: #000000;
+    border: 2px solid #1A1A1A;
+    border-radius: 15px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Roobert;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+    min-height: 60px;
+    min-width: 0;
+    outline: none;
+    padding: 16px 24px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 30%;
+    will-change: transform;
+  }
+  
+  .button2:disabled {
+    pointer-events: none;
+  }
+  
+  .button2:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+  }
+  
+  .button2:active {
+    box-shadow: none;
+    transform: translateY(0);
+  }
+
+  .content3{
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px;
+  }
+
+  .content3 section img{
+    width: 600px;
+    margin-left: 100px;
+  }
+
+  .content3 h1{
+    font-size: 50px;
+    font-weight: 900;
+    color: #030000;
+  }
+
+  .team h1 {
+    background-color: #d6d6d6;
+    margin-bottom: -60px;
+    padding-left: 70px;
+    font-size: 50px;
+    font-weight: 900;
+    padding-top: 50px;
+  }
+
+  .content4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px;
+    background-color: #d6d6d6;
+    overflow-x: auto;
+  }
+
+  .content .card {
+    background-color: #605f5f;
+    border-radius: 10px;
+    box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    margin: 10px;
+    padding: 50px;
+  }
+  
+  .profile{
+    appearance: none;
+    background-color: #000000;
+    border: 2px solid #1A1A1A;
+    border-radius: 15px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-size: 10px;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+    min-height: 60px;
+    min-width: 0;
+    outline: none;
+    padding: 0px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    will-change: transform;
+  }
+  
+  .profile:disabled {
+    pointer-events: none;
+  }
+  
+  .profile:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+  }
+  
+  .profile:active {
+    box-shadow: none;
+    transform: translateY(0);
+  }
+  

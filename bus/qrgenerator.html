@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <title>Document</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Poppins');
+
+    * {
+        padding: 0;
+        margin-top: 0;
+        margin-left: -.5px;
+    }
+
+    body {
+        font-family: 'poppins', sans-serif;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        box-shadow: #5c5c5c;
+    }
+
+    nav {
+        width: 100%;
+        height: 10%;
+        text-decoration: none;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #000000;
+
+    }
+
+    nav ul {
+        display: flex;
+        padding: 15px;
+        padding-top: 10px;
+    }
+
+    nav ul li {
+        display: flex;
+        position: relative;
+        list-style-type: none;
+        color: #5c5c5c;
+        margin-right: 25px;
+        cursor: pointer;
+        transition: .3s linear;
+        font-size: 18px;
+        padding-top: 10px;
+    }
+
+    nav ul li:hover {
+        color: #ffffff;
+    }
+
+    nav ul li:nth-child(1) {
+        color: #ffffff;
+    }
+
+    nav .search {
+        position: relative;
+        width: 30%;
+        margin-left: 5%;
+        padding: 5px 5px;
+        border-radius: 20px;
+        color: rgb(255, 255, 255);
+        border-color: #9a0e0e;
+        background-color: #4a4a4ac0;
+    }
+
+    nav .search::before {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        background: rgb(255, 255, 255);
+        backdrop-filter: blur(5px);
+        z-index: -1;
+    }
+
+    nav .search .bi {
+        font-size: 15px;
+        padding: 3px 0px 0px 10px;
+    }
+
+    nav .search input {
+        background: none;
+        outline: none;
+        border: none;
+        padding: 0px 10px;
+        color: #ffffff;
+        font-size: 13px;
+    }
+
+    nav .logo img {
+        width: 120px;
+        height: 90px;
+        margin-left: 50px;
+        margin-bottom: 10px;
+
+    }
+
+    .content2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    input {
+        width: 300px;
+        height: 50px;
+        background-color: #dedede;
+        color: black;
+        outline: none;
+        border: none;
+        padding: 5px;
+        border-radius: 10px;
+        font-size: 20px;
+        display: flex;
+        border-color: #000000;
+
+    }
+    .button2 {
+        background-color: #000000;
+        border: 2px solid #1A1A1A;
+        border-radius: 15px;
+        box-sizing: border-box;
+        color: #FFFFFF;
+        cursor: pointer;
+        display: inline-block;
+        font-family: poopins;
+        font-weight: 600;
+        line-height: normal;
+        min-height: 60px;
+        min-width: 0;
+        outline: none;
+        padding: 16px 24px;
+        text-align: center;
+        margin-left: -580px;
+        margin-top: 20px;
+      }
+
+    #qrcode {
+        width: 160px;
+        height: 160px;
+        margin-top: 170px;
+        margin-left: 40px;
+    }
+</style>
+
+<body>
+    <nav>
+        <div class="logo">
+            <img src="img/Screenshot_2024-04-03_193159-removebg-preview.png" alt="">
+        </div>
+        <ul>
+            <li>HOME<span></span></li>
+            <li>TRACK<span></span></li>
+            <li>FIND YOUR ROUTE<span></span></li>
+            <li>SUPPORT<span></span></li>
+        </ul>
+    </nav>
+    <div class="heading">
+        <h1 style="justify-content: center; align-items: center; margin-left:500px; padding:40px; font-weight:900;">AGAIN ENTER YOUR PREFENCE</h1>
+    </div>
+    <div class="content2">
+        <div class="place">
+            <input type="text" placeholder="start">
+        </div>
+        <h1> <-> </h1>
+        <div class="place">
+            <input type="text" placeholder="destination">
+        </div>
+    </div>
+    <button class="button2" role="button">GENERATE QR</button>
+    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-md-offset-4 col-lg-offset-4">
+        <div id="qrcode"></div>
+    </div>
+    </div>
+    </div>
+    </div>
+</body>
+<script>
+    function randomNumber(len) {
+        var randomNumber;
+        var n = '';
+
+        for (var count = 0; count < len; count++) {
+            randomNumber = Math.floor(Math.random() * 10);
+            n += randomNumber.toString();
+        }
+        return n;
+    }
+
+    $('.button2').click(function () {
+
+        var value = randomNumber(12);
+        $("#qrcode").html("");
+        var qrcode = new QRCode("qrcode");
+        qrcode.makeCode(value);
+
+    });  
+</script>
+
+</html>

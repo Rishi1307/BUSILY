@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="qr-reader"
+        style="width: 50%; justify-content:center; align-items:center; margin-left: 370px; margin-top:100px;"></div>
+    <script src="https://unpkg.com/html5-qrcode"></script>
+    <script>
+        function onScanSuccess(qrCodeMessage) {
+            alert(qrCodeMessage);
+        }
+
+        function onScanError(errorMessage) {
+            //handle scan error
+        }
+
+        let html5QrcodeScanner = new Html5QrcodeScanner(
+            "qr-reader",
+            { fps: 60, qrbox: 500 },
+            /* verbose= */ false);
+        html5QrcodeScanner.render(onScanSuccess, onScanError);
+    </script>
+    <script src="qrscan.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyDTZFLW9GNdiKDut4DrWECrqBktGpKWZxk",
+            authDomain: "hallowed-scene-401718.firebaseapp.com",
+            databaseURL: "https://hallowed-scene-401718-default-rtdb.firebaseio.com",
+            projectId: "hallowed-scene-401718",
+            storageBucket: "hallowed-scene-401718.appspot.com",
+            messagingSenderId: "231329096876",
+            appId: "1:231329096876:web:cf254fa787ed588f6aab09",
+            measurementId: "G-DL8DJ9MFVE"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+    </script>
+</body>
+
+</html>
